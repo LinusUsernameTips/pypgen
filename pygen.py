@@ -9,8 +9,8 @@ print("██║     ██║   ██║   ██║   ╚════██�
 print("███████╗╚██████╔╝   ██║   ███████║    ██║     ██║  ██║███████║███████║    ╚██████╔╝███████╗██║ ╚████║")
 print("╚══════╝ ╚═════╝    ╚═╝   ╚══════╝    ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝     ╚═════╝ ╚══════╝╚═╝  ╚═══╝")                               
 characters = string.printable.strip()
-while 1:
-  while 1:
+while True:
+  while True:
    try:
     pass_len = int(input("How long you want the pass / passes to be? : "))
     break 
@@ -19,7 +19,7 @@ while 1:
 
   multiplepassq = str(input("Do you need multiple passes? Y/N : "))
   if multiplepassq.lower() == "y":
-    while 1:
+    while True:
      try:
       howmanypass = int(input("How many passes? : "))
       break
