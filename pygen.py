@@ -1,13 +1,14 @@
 import secrets
 import keyword 
+import string
 
 print("██╗     ██╗   ██╗████████╗███████╗    ██████╗  █████╗ ███████╗███████╗     ██████╗ ███████╗███╗   ██╗")
 print("██║     ██║   ██║╚══██╔══╝██╔════╝    ██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔════╝ ██╔════╝████╗  ██║")
 print("██║     ██║   ██║   ██║   ███████╗    ██████╔╝███████║███████╗███████╗    ██║  ███╗█████╗  ██╔██╗ ██║")
 print("██║     ██║   ██║   ██║   ╚════██║    ██╔═══╝ ██╔══██║╚════██║╚════██║    ██║   ██║██╔══╝  ██║╚██╗██║")
 print("███████╗╚██████╔╝   ██║   ███████║    ██║     ██║  ██║███████║███████║    ╚██████╔╝███████╗██║ ╚████║")
-print("╚══════╝ ╚═════╝    ╚═╝   ╚══════╝    ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝     ╚═════╝ ╚══════╝╚═╝  ╚═══╝")                                                                                               
-stuff = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789{[}]:;'.,/")
+print("╚══════╝ ╚═════╝    ╚═╝   ╚══════╝    ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝     ╚═════╝ ╚══════╝╚═╝  ╚═══╝")                               
+characters = string.printable.strip()
 while 1:
   while 1:
    try:
@@ -28,13 +29,13 @@ while 1:
     for x in range(0, howmanypass):
      password2 = ""
      for x in range(0, pass_len):
-      grabletter = secrets.choice(stuff)
+      grabletter = secrets.choice(characters)
       password2   = password2 + grabletter
      print("Password : ", password2)
   if multiplepassq.lower() == "n":
      print("Ok!")
      password = ""
      for x in range(0, pass_len):
-      grabletter = secrets.choice(stuff)
+      grabletter = secrets.choice(characters)
       password  = password + grabletter
      print("Password : ", password)
